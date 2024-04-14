@@ -5,7 +5,7 @@ const subject = document.getElementById("subject");
 const mess = document.getElementById("message");
 
 function sendEmail() {
-  const bodymessage = "Nama Lengkap: ${nama.value}<br> Email: ${email.value}<br> Subject: ${subject.value}<br> Pesan: ${mess.value}";
+  const bodymessage = Nama Lengkap: ${nama.value}<br> Email: ${email.value}<br> Subject: ${subject.value}<br> Pesan: ${mess.value};
 
   Email.send({
     Host: "smtp.elasticemail.com",
@@ -13,7 +13,7 @@ function sendEmail() {
     Password: "82389FF06A15624D26592F731E6226233E95",
     To: "jaenuri.hasro@gmail.com",
     From: "jaenuri.hasro@gmail.com",
-    Subject: nama.value,
+    Subject: subject.value,
     Body: bodymessage,
   }).then((message) => alert(message));
 }
