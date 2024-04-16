@@ -8,6 +8,11 @@
   position: relative;
 }
 
+section-h1 .ketrg {
+  border: #141313;
+  border-radius: 16px;
+}
+
 #project {
   background-color: aliceblue;
 }
