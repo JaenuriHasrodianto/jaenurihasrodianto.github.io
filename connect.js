@@ -5,7 +5,7 @@ const subject = document.getElementById("subject");
 const mess = document.getElementById("message");
 
 function sendEmail() {
-  const bodyMessage = "Nama Lengkap: ${nama.value}<br> Email: ${email.value}<br> Subject: ${subject.value}<br> Pesan: ${mess.value}";
+  const bodyMessage = "Nama Lengkap: ${nama.value}<br> Email: ${email.value}<br> Pesan: ${mess.value}";
   Email.send({
     Host: "smtp.elasticemail.com",
     Username: "jaenuri.hasro@gmail.com",
@@ -14,7 +14,15 @@ function sendEmail() {
     From: "jaenuri.hasro@gmail.com",
     Subject: subject.value,
     Body: bodyMessage,
-  }).then((message) => alert(message));
+  }).then((message) => {
+    if (message == "OK") {
+      Swal.fire({
+        title: "BERHASIL!",
+        text: "anda telah mengirim pesan!<br> kami akan segera mengirim pesan ke email and!",
+        icon: "success",
+      });
+    }
+  });
 }
 
 form.addEventListener("submit", (e) => {
