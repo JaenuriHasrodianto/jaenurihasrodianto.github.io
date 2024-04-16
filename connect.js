@@ -7,7 +7,7 @@ const mess = document.getElementById("message");
 function sendEmail() {
   const bodyMessage = "Nama Lengkap: ${nama.value}<br> Email: ${email.value}<br> Pesan: ${mess.value}";
   Email.send({
-    secureToken: "8fbee779-0b22-4ffe-9ead-4e9468cdd12f",
+    SecureToken: "8fbee779-0b22-4ffe-9ead-4e9468cdd12f",
     To: "jaenuri.hasro@gmail.com",
     From: "jaenuri.hasro@gmail.com",
     Subject: subject.value,
