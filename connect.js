@@ -14,8 +14,7 @@ function sendEmail() {
     From: "jaenuri.hasro@gmail.com",
     Subject: subject.value,
     Body: bodyMessage,
-  }).then(
-    message => {
+  }).then((message) => {
     if (message == "OK") {
       Swal.fire({
         title: "SUCCESS!",
@@ -79,5 +78,6 @@ form.addEventListener("submit", (e) => {
   checkInputs();
 
   if (!nama.classList.contains("error") && !email.classList.contains("error") && !subject.classList.contains("error") && !mess.classList.contains("error")) {
-    console.log("OK")
+    sendEmail();
+  }
 });
