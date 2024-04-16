@@ -1,16 +1,11 @@
 .jumbotron {
   padding-top: 6rem;
-  background-image: url(/img/project/1.jpg);
+  background-image: url(/img/project/background.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: 0 -140px;
   overflow: hidden;
   position: relative;
-}
-
-section-h1 .ketrg {
-  border: #141313;
-  border-radius: 16px;
 }
 
 #project {
