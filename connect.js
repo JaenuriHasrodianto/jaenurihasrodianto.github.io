@@ -19,7 +19,7 @@ function sendEmail() {
     if (message == "OK") {
       Swal.fire({
         title: "SUCCESS!",
-        text: "anda berhasil mengirim pesan!<br> kami akan segera mengirim pesan ke email and!",
+        text: "anda berhasil mengirim pesan! kami akan segera mengirim pesan ke email and!",
         icon: "success",
       });
     }
