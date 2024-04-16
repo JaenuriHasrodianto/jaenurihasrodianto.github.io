@@ -76,4 +76,7 @@ function checkEmail() {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   checkInputs();
+
+  if (!nama.classList.contains("error") && !email.classList.contains("error") && !subject.classList.contains("error") && !mess.classList.contains("error")) {
+    console.log("OK")
 });
