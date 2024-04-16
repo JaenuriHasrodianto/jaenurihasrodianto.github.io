@@ -56,10 +56,17 @@ function checkInputs() {
 
 function checkEmail() {
   const emailRegex = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
+  const errorTxtEmail = document.querySelector(".error-text.email");
 
   if (!email.value.match(emailRegex)) {
     email.classList.add("error");
     email.parentElement.classList.add("error");
+
+    if (email.value != "") {
+      errorTxtEmail.innerText = "Masukan email yang benar!";
+    } else {
+      errorTxtEmail.innerText = "input gak boleh kosong yaa!";
+    }
   } else {
     email.classList.remove("error");
     email.parentElement.classList.remove("error");
