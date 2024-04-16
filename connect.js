@@ -7,9 +7,7 @@ const mess = document.getElementById("message");
 function sendEmail() {
   const bodyMessage = "Nama Lengkap: ${nama.value}<br> Email: ${email.value}<br> Pesan: ${mess.value}";
   Email.send({
-    Host: "smtp.elasticemail.com",
-    Username: "jaenuri.hasro@gmail.com",
-    Password: "82389FF06A15624D26592F731E6226233E95",
+    secureToken: "8fbee779-0b22-4ffe-9ead-4e9468cdd12f",
     To: "jaenuri.hasro@gmail.com",
     From: "jaenuri.hasro@gmail.com",
     Subject: subject.value,
@@ -79,5 +77,8 @@ form.addEventListener("submit", (e) => {
 
   if (!nama.classList.contains("error") && !email.classList.contains("error") && !subject.classList.contains("error") && !mess.classList.contains("error")) {
     sendEmail();
+
+    form.reset();
+    return false;
   }
 });
