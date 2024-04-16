@@ -14,7 +14,8 @@ function sendEmail() {
     From: "jaenuri.hasro@gmail.com",
     Subject: subject.value,
     Body: bodyMessage,
-  }).then((message) => {
+  }).then(
+    message => {
     if (message == "OK") {
       Swal.fire({
         title: "SUCCESS!",
