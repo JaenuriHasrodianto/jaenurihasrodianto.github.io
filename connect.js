@@ -11,17 +11,18 @@ function sendEmail() {
     To: "jaenuri.hasro@gmail.com",
     From: "jaenuri.hasro@gmail.com",
     Subject: subject.value,
-    Body: bodyMessage,
+    Body: bodyMessage
   }).then(
     message => {
-    if (message == "OK") {
-      Swal.fire({
-        title: "SUCCESS!",
-        text: "anda berhasil mengirim pesan!",
-        icon: "success",
-      });
+      if (message == "OK") {
+        Swal.fire({
+          title: "SUCCESS!",
+          text: "anda berhasil mengirim pesan!",
+          icon: "success",
+        });
+      }
     }
-  });
+  );
 }
 
 function checkInputs() {
