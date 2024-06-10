@@ -15,6 +15,8 @@
 
     <!-- my css -->
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
+
 
     <title>Portfolio: Jaenuri Hasrodianto</title>
   </head>
@@ -155,42 +157,53 @@
         <div class="row text-center mb-3" data-aos="fade-left" data-aos-delay="100"
     data-aos-duration="1000">
           <div class="col">
-            <h2>Contact Me</h2>
+             <button class="btn-open-popup" onclick="togglePopup()">CONTACT ME HERE</button>
           </div>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-md-4">
-            <form action="#">
+          <!-- popuup -->
+        
+          <div id="popupOverlay" class="overlay-container">
+            <form action="/payment" method="post">
+              <div class="popup-box">
+                <h2 style="color: green;">MASUKAN DATA ANDA</h2>
+                <form class="form-container">
+
               <div class="mb-3 field" data-aos="fade-left" data-aos-delay="150"
     data-aos-duration="1000">
                 <label for="name" class="form-label">Nama Lengkap</label>
-                <input type="text" class="form-control item" id="name" placeholder="Masukan Nama Lengkap" autocomplete="off" />
+                <input type="text" class="form-control item form-inpu" id="name" name="name" placeholder="Masukan Nama Lengkap" required />
                 <div class="error-text">input gak boleh kosong yaa!!!</div>
               </div>
               <div class="mb-3 field" data-aos="fade-left" data-aos-delay="300"
     data-aos-duration="1000">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control item" id="email" placeholder="Masukan Email" autocomplete="off" />
+                <input type="email" class="form-control item form-inpu" id="email" name="email" placeholder="Masukan Email" required />
                 <div class="error-text email">input gak boleh kosong yaa!!!</div>
               </div>
               <div class="mb-3 field" data-aos="fade-left" data-aos-delay="450"
     data-aos-duration="1000">
                 <label for="subject" class="form-label">Subject</label>
-                <input type="text" class="form-control item" id="subject" placeholder="Masukan Subject" autocomplete="off" />
+                <input type="text" class="form-control item form-inpu" id="subject" name="subject" placeholder="Masukan Subject" required />
                 <div class="error-text">input gak boleh kosong yaa!!!</div>
               </div>
               <div class="mb-3 field" data-aos="fade-left" data-aos-delay="600"
     data-aos-duration="1000">
                 <label for="message" class="form-label">Pesan</label>
-                <textarea name="" class="form-control item" id="message" rows="7" placeholder="Masukan pesan anda!"></textarea>
+                <textarea name="" class="form-control item form-inpu" id="message" name="message" rows="7" placeholder="Masukan pesan anda!"></textarea>
                 <div class="error-text">input gak boleh kosong yaa!!!</div>
               </div>
-              <button type="submit" class="btn btn-primary" data-aos="fade-in" data-aos-delay="300"
-    data-aos-duration="2000">Kirim</button>
-            </form>
+              
+                 <button type="submit" class="btn-submit btn btn-primary" data-aos="fade-in" data-aos-delay="300" data-aos-duration="2000">Kirim</button>
+                 
+                </form>
+                <button class="btn-close-popup" onclick="togglePopup()">Close</button>
+              </div>
           </div>
-        </div>
-      </div>
+        
+        
+          <!-- end popup-->
+
+      
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#0d6efd"
@@ -215,6 +228,11 @@
       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
+  </script>
+  <script>
+    function togglePopup() {
+      document.getElementById("popupOverlay").classList.toggle("show");
+    }
   </script>
   </body>
 </html>
